@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Target, Award, Users, Lightbulb } from "lucide-react";
+import aboutTeamImage from "@/assets/about-team.jpg";
 
 const highlights = [
   { icon: Target, label: "Client-Centric Approach" },
@@ -18,12 +19,47 @@ const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-background" ref={ref}>
       <div className="container-narrow">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
+            className="relative order-2 lg:order-1"
+          >
+            <div className="relative">
+              {/* Main Image */}
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={aboutTeamImage} 
+                  alt="Uruhu Solutions Team" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              {/* Decorative Elements */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-2xl -z-10" />
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-navy/10 rounded-2xl -z-10" />
+              
+              {/* Stats Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="absolute -bottom-4 -right-4 md:bottom-6 md:right-6 bg-navy text-white px-6 py-4 rounded-xl shadow-lg"
+              >
+                <p className="text-3xl font-bold font-heading">10+</p>
+                <p className="text-sm text-white/80">Years of Excellence</p>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Content Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="order-1 lg:order-2"
           >
             <span className="badge-style mb-6">About Us</span>
             
@@ -35,7 +71,7 @@ const AboutSection = () => {
               Delivering Clarity, Structure, and Sustainable Growth
             </p>
             
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Uruhu Solutions stands at the intersection of innovation and expertise. We are a forward-thinking 
               financial and risk advisory firm committed to empowering individuals and organizations across Nigeria 
               to achieve their financial objectives with confidence.
@@ -43,39 +79,30 @@ const AboutSection = () => {
             
             <p className="text-muted-foreground leading-relaxed mb-8">
               Our approach combines deep market knowledge, strategic thinking, and personalized service to deliver 
-              solutions that are both practical and transformative. Whether you're seeking capital, managing risk, 
-              or optimizing your portfolio, we provide the clarity and structure needed to navigate complexity and 
-              unlock sustainable growth.
+              solutions that are both practical and transformative.
             </p>
+
+            {/* Highlights */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {highlights.map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-accent" />
+                  </div>
+                  <span className="font-medium text-primary text-sm">{item.label}</span>
+                </motion.div>
+              ))}
+            </div>
 
             <Button variant="teal" size="lg">
               Learn More About Us
             </Button>
-          </motion.div>
-
-          {/* Highlights Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 gap-6"
-          >
-            {highlights.map((item, index) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="group p-6 rounded-2xl bg-secondary hover:shadow-card-hover transition-all duration-300 border border-border hover:border-accent/30"
-              >
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                  <item.icon className="w-7 h-7 text-accent" />
-                </div>
-                <h3 className="font-heading font-semibold text-primary text-lg">
-                  {item.label}
-                </h3>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </div>
