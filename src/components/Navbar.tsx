@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoImage from "@/assets/uruhu-logo.jpg";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -39,14 +40,14 @@ const Navbar = () => {
         <div className="container-narrow px-4 md:px-8 lg:px-16">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2">
-              <span
-                className={`font-heading text-xl md:text-2xl font-bold transition-colors ${
-                  isScrolled ? "text-primary" : "text-navy-foreground"
+            <a href="#" className="flex items-center">
+              <img 
+                src={logoImage} 
+                alt="Uruhu Solutions" 
+                className={`transition-all duration-300 object-contain ${
+                  isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
                 }`}
-              >
-                Uruhu<span className="text-accent">Solutions</span>
-              </span>
+              />
             </a>
 
             {/* Desktop Navigation */}
