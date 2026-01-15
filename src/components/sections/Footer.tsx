@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Clock, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import logoImage from "@/assets/uruhu-logo.jpg";
 
 const quickLinks = [
   { label: "About Us", href: "#about" },
@@ -34,8 +35,8 @@ const Footer = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h3 className="font-heading text-2xl font-bold mb-2">Uruhu Solutions</h3>
-                <p className="text-accent mb-6">Building Value. Managing Risk.</p>
+                <img src={logoImage} alt="Uruhu Solutions" className="h-16 mb-4" />
+                <p className="text-accent">Building Value. Managing Risk.</p>
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
