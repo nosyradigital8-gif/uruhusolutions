@@ -7,7 +7,7 @@ import heroImage from "@/assets/hero-image.jpg";
 const slides = [
   {
     badge: "Welcome to Uruhu Solutions",
-    title: "Building Value. Managing Risk.",
+    title: "Building Value. Managing Risk",
     subtitle: "Your Strategic Partner in Financial Growth and Risk Management",
     description:
       "Uruhu Solutions is a forward-thinking financial and risk advisory firm delivering clarity, structure, and sustainable growth for individuals and organisations across Nigeria and beyond.",
@@ -16,7 +16,7 @@ const slides = [
   },
   {
     badge: "Who We Are",
-    title: "Transforming Financial Complexity into Strategic Clarity",
+    title: "Turning Financial Complexity into Clarity",
     subtitle: "Expert Advisors. Tailored Solutions. Measurable Results.",
     description:
       "With deep expertise in funding, risk management, and asset optimization, we empower our clients to make informed decisions that drive sustainable growth and protect their financial futures.",
@@ -25,7 +25,7 @@ const slides = [
   },
   {
     badge: "What We Do",
-    title: "Comprehensive Financial & Risk Advisory Services",
+    title: "Financial & Risk Advisory Services",
     subtitle: "Tailored Solutions for Every Stage of Your Financial Journey",
     description:
       "From capital acquisition to portfolio management and risk mitigation, we provide integrated advisory services designed to maximize value and minimize uncertainty in today's dynamic market.",
@@ -44,19 +44,20 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const nextSlide = () =>
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () =>
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-28 md:pt-32 lg:pt-36">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Uruhu Solutions Team" 
+        <img
+          src={heroImage}
+          alt="Uruhu Solutions Team"
           className="w-full h-full object-cover"
         />
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/80 to-navy/60" />
       </div>
 
@@ -66,13 +67,15 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-navy rounded-full blur-3xl" />
       </div>
 
-      {/* Grid Pattern Overlay */}
-      <div 
+      {/* Grid Overlay */}
+      <div
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: "50px 50px",
         }}
       />
 
@@ -101,7 +104,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-tight"
+              className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight"
             >
               {slides[currentSlide].title}
             </motion.h1>
@@ -111,7 +114,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-xl md:text-2xl text-white/90 font-medium mb-6"
+              className="text-lg md:text-xl text-white/90 font-medium mb-6"
             >
               {slides[currentSlide].subtitle}
             </motion.p>
@@ -121,7 +124,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-white/80 mb-10 max-w-2xl leading-relaxed"
+              className="text-base md:text-lg text-white/80 mb-10 max-w-2xl leading-relaxed"
             >
               {slides[currentSlide].description}
             </motion.p>
@@ -143,34 +146,32 @@ const HeroSection = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Slide Navigation */}
+        {/* Navigation */}
         <div className="absolute bottom-8 left-4 md:left-8 lg:left-16 flex items-center gap-4 z-20">
-          {/* Dots */}
           <div className="flex gap-2">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`h-3 rounded-full transition-all duration-300 ${
                   currentSlide === index
                     ? "bg-accent w-8"
-                    : "bg-white/30 hover:bg-white/50"
+                    : "bg-white/30 w-3 hover:bg-white/50"
                 }`}
               />
             ))}
           </div>
 
-          {/* Arrows */}
           <div className="flex gap-2 ml-4">
             <button
               onClick={prevSlide}
-              className="p-2 rounded-full border border-white/30 text-white/70 hover:bg-white/10 transition-colors"
+              className="p-2 rounded-full border border-white/30 text-white/70 hover:bg-white/10"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="p-2 rounded-full border border-white/30 text-white/70 hover:bg-white/10 transition-colors"
+              className="p-2 rounded-full border border-white/30 text-white/70 hover:bg-white/10"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -185,7 +186,9 @@ const HeroSection = () => {
         transition={{ delay: 1 }}
         className="absolute bottom-8 right-8 hidden md:flex flex-col items-center gap-2 text-white/60"
       >
-        <span className="text-sm tracking-wider rotate-90 origin-center translate-y-8">SCROLL</span>
+        <span className="text-sm tracking-wider rotate-90 translate-y-8">
+          SCROLL
+        </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
