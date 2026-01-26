@@ -12,15 +12,16 @@ import {
   Users,
   LineChart
 } from "lucide-react";
+import heroImage from "@/assets/hero-image.jpg";
 import { NavLink } from "@/components/NavLink";
 
 const services = [
   {
     icon: TrendingUp,
     title: "Funding & Capital Advisory",
-    tagline: "Strategic Capital Solutions for Growth",
+    tagline: "Strategic Capital Solutions",
     description:
-      "Connect with the right funding sources and structure optimal financing solutions for your capital needs.",
+      "Connect with funding sources and structure optimal financing solutions.",
     features: [
       "Capital Structure Optimization",
       "Investor Relations Management",
@@ -41,7 +42,7 @@ const services = [
     title: "Risk Advisory",
     tagline: "Comprehensive Risk Management",
     description:
-      "Identify and mitigate financial risks before they impact your bottom line. Build resilience and ensure compliance.",
+      "Identify and mitigate financial risks. Build resilience and ensure compliance.",
     features: [
       "Enterprise Risk Management",
       "Compliance & Regulatory Advisory",
@@ -62,7 +63,7 @@ const services = [
     title: "Portfolio & Asset Management",
     tagline: "Strategic Wealth Growth",
     description:
-      "Maximize returns through strategic portfolio management aligned with your goals and risk tolerance.",
+      "Maximize returns through strategic portfolio management aligned with your goals.",
     features: [
       "Investment Strategy Development",
       "Asset Allocation & Diversification",
@@ -84,22 +85,22 @@ const processSteps = [
   {
     icon: Target,
     title: "Discovery",
-    description: "Understanding your unique needs and objectives",
+    description: "Understanding your unique needs",
   },
   {
     icon: LineChart,
     title: "Strategy",
-    description: "Developing customized solutions for your goals",
+    description: "Developing customized solutions",
   },
   {
     icon: Users,
     title: "Execution",
-    description: "Implementing solutions with expert guidance",
+    description: "Implementing with expert guidance",
   },
   {
     icon: TrendingUp,
     title: "Optimization",
-    description: "Continuous monitoring and improvement",
+    description: "Continuous monitoring",
   },
 ];
 
@@ -114,28 +115,44 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative pt-32 pb-20 bg-gradient-to-br from-orange/10 via-background to-teal/10">
-        <div className="container-narrow px-4 md:px-8 lg:px-16">
+      <section ref={heroRef} className="relative flex items-center overflow-hidden pt-24 md:pt-32 min-h-[70vh]">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Our Services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/85 to-navy/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange/20 via-transparent to-teal/20" />
+        </div>
+
+        {/* Content */}
+        <div className="container-narrow w-full px-4 sm:px-6 md:px-10 lg:px-16 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="max-w-4xl"
           >
-            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-teal/10 text-teal border border-teal/20 mb-6">
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-teal/20 text-white border border-teal/50 backdrop-blur-sm mb-6">
               Our Services
             </span>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
               Comprehensive Financial Solutions
             </h1>
-            <p className="text-xl text-teal font-semibold mb-6">
-              Expert Advisory Across Funding, Risk Management, and Asset Optimization
+            <p className="text-xl sm:text-2xl text-teal mb-5 font-semibold">
+              Expert Advisory for Your Success
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Tailored financial advisory services designed to maximize value and minimize uncertainty in today's dynamic market.
+            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl">
+              Tailored financial advisory designed to maximize value and minimize uncertainty.
             </p>
           </motion.div>
         </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute top-1/3 right-10 w-72 h-72 bg-orange/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-teal/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
       </section>
 
       {/* Services Detail Section */}
