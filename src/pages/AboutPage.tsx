@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Target, Award, Users, Lightbulb, TrendingUp, Shield, Heart } from "lucide-react";
 import aboutTeamImage from "@/assets/about-team.jpg";
+import heroImage from "@/assets/hero-image.jpg";
 import { NavLink } from "@/components/NavLink";
 
 const highlights = [
@@ -17,22 +18,22 @@ const values = [
   {
     icon: Target,
     title: "Excellence",
-    description: "Committed to delivering exceptional results and exceeding expectations.",
+    description: "Delivering exceptional results and exceeding expectations.",
   },
   {
     icon: Shield,
     title: "Integrity",
-    description: "Building trust through transparency, honesty, and ethical practices.",
+    description: "Building trust through transparency and ethical practices.",
   },
   {
     icon: Heart,
     title: "Client First",
-    description: "Your success is our priority in every decision we make.",
+    description: "Your success is our priority in every decision.",
   },
   {
     icon: TrendingUp,
     title: "Innovation",
-    description: "Embracing new approaches to solve complex financial challenges.",
+    description: "New approaches for complex financial challenges.",
   },
 ];
 
@@ -47,28 +48,44 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative pt-32 pb-20 bg-gradient-to-br from-orange/10 via-background to-teal/10">
-        <div className="container-narrow px-4 md:px-8 lg:px-16">
+      <section ref={heroRef} className="relative flex items-center overflow-hidden pt-24 md:pt-32 min-h-[70vh]">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="About Uruhu Solutions"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/85 to-navy/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange/20 via-transparent to-teal/20" />
+        </div>
+
+        {/* Content */}
+        <div className="container-narrow w-full px-4 sm:px-6 md:px-10 lg:px-16 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="max-w-4xl"
           >
-            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orange/10 text-orange border border-orange/20 mb-6">
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orange/20 text-white border border-orange/50 backdrop-blur-sm mb-6">
               About Uruhu Solutions
             </span>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
               Building Value. Managing Risk.
             </h1>
-            <p className="text-xl text-teal font-semibold mb-6">
+            <p className="text-xl sm:text-2xl text-teal mb-5 font-semibold">
               Your Trusted Partner in Financial Excellence
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Forward-thinking financial and risk advisory firm empowering individuals and organizations across Nigeria to achieve their financial objectives with confidence.
+            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl">
+              Forward-thinking financial advisory empowering organizations across Nigeria with confidence.
             </p>
           </motion.div>
         </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute top-1/3 right-10 w-72 h-72 bg-orange/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
+        <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-teal/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
       </section>
 
       {/* Story Section */}
