@@ -52,13 +52,15 @@ const HeroSection = () => {
           alt="Uruhu Solutions"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/70" />
+        {/* Dark overlay at top for logo visibility, gradient to vibrant colors below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/70 to-navy/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange/25 to-teal/30" />
         {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange/15 via-transparent to-transparent animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange/15 via-transparent to-teal/15 animate-pulse" style={{ animationDuration: '8s' }} />
       </div>
 
       {/* Content */}
-      <div className="container-narrow w-full px-4 sm:px-6 md:px-10 lg:px-16 relative z-10">
+      <div className="container-narrow w-full px-4 sm:px-6 md:px-10 lg:px-16 relative z-10 pb-24">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -133,7 +135,7 @@ const HeroSection = () => {
         </AnimatePresence>
 
         {/* Dots Indicator */}
-        <div className="absolute bottom-8 left-4 right-4 flex items-center justify-center md:left-10 md:justify-start">
+        <div className="absolute bottom-8 left-0 right-0 flex items-center justify-center">
           <div className="flex gap-3">
             {slides.map((_, i) => (
               <button
@@ -142,7 +144,7 @@ const HeroSection = () => {
                 className={`h-3 rounded-full transition-all duration-300 ${
                   currentSlide === i
                     ? "bg-orange w-10 shadow-lg"
-                    : "bg-white/40 w-3 hover:bg-white/60"
+                    : "bg-white/50 w-3 hover:bg-white/70"
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
@@ -152,7 +154,7 @@ const HeroSection = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-10 w-72 h-72 bg-orange/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
+      <div className="absolute top-1/3 right-10 w-72 h-72 bg-orange/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }} />
       <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-teal/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
     </section>
   );
