@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { NavLink } from "@/components/ui/nav-link";
+import { NavLink } from "@/components/NavLink";
 import { Menu, X } from "lucide-react";
 import logoImage from "@/assets/uruhu-logo.jpg";
 
