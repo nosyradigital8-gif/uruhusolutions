@@ -53,7 +53,9 @@ const HeroSection = () => {
           alt="Uruhu Solutions"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/80 to-navy/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/80 to-teal/60" />
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange/20 via-transparent to-teal/20 animate-pulse" style={{ animationDuration: '8s' }} />
       </div>
 
       {/* Content */}
@@ -68,50 +70,83 @@ const HeroSection = () => {
             className="max-w-3xl"
           >
             {/* Badge */}
-            <span className="inline-flex px-3 py-1.5 text-xs sm:text-sm rounded-full bg-white/20 text-white border border-white/30 mb-4">
+            <motion.span 
+              className="inline-flex px-4 py-2 text-xs sm:text-sm rounded-full bg-gradient-to-r from-orange/30 to-teal/30 text-white border border-orange/40 backdrop-blur-sm mb-4 shadow-lg"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               {slides[currentSlide].badge}
-            </span>
+            </motion.span>
 
             {/* Title */}
-            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
+            <motion.h1 
+              className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
               {slides[currentSlide].title}
-            </h1>
+            </motion.h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-white/90 mb-4">
+            <motion.p 
+              className="text-base sm:text-lg md:text-xl text-orange-200 mb-4 font-medium"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
               {slides[currentSlide].subtitle}
-            </p>
+            </motion.p>
 
             {/* Description */}
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-8 max-w-xl">
+            <motion.p 
+              className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
               {slides[currentSlide].description}
-            </p>
+            </motion.p>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button size="lg" className="w-full sm:w-auto">
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              <Button 
+                size="lg" 
+                className="w-full sm:w-auto bg-gradient-to-r from-orange to-orange-dark hover:shadow-orange-glow transition-all duration-300 border-0 text-white font-semibold px-8"
+              >
                 {slides[currentSlide].cta1}
               </Button>
-              <Button variant="heroOutline" size="lg" className="w-full sm:w-auto">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="w-full sm:w-auto border-2 border-teal bg-teal/10 text-white hover:bg-teal hover:shadow-teal-glow transition-all duration-300 backdrop-blur-sm font-semibold px-8"
+              >
                 {slides[currentSlide].cta2}
               </Button>
-            </div>
+            </motion.div>
           </motion.div>
         </AnimatePresence>
 
         {/* Controls */}
-        <div className="absolute bottom-6 left-4 right-4 flex items-center justify-between md:justify-start md:gap-6 md:left-8">
+        <div className="absolute bottom-8 left-4 right-4 flex items-center justify-between md:justify-start md:gap-8 md:left-10">
           {/* Dots */}
-          <div className="flex gap-2">
+          <div className="flex gap-2.5">
             {slides.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
-                className={`h-2.5 rounded-full transition-all ${
+                className={`h-2.5 rounded-full transition-all duration-300 ${
                   currentSlide === i
-                    ? "bg-accent w-6"
-                    : "bg-white/40 w-2.5"
+                    ? "bg-gradient-to-r from-orange to-teal w-8 shadow-lg"
+                    : "bg-white/40 w-2.5 hover:bg-white/60"
                 }`}
+                aria-label={`Go to slide ${i + 1}`}
               />
             ))}
           </div>
@@ -124,21 +159,27 @@ const HeroSection = () => {
                   prev === 0 ? slides.length - 1 : prev - 1
                 )
               }
-              className="p-2 rounded-full border border-white/30 text-white/70"
+              className="p-2.5 rounded-full border-2 border-white/40 text-white/80 hover:bg-orange/20 hover:border-orange hover:text-white transition-all duration-300 backdrop-blur-sm"
+              aria-label="Previous slide"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() =>
                 setCurrentSlide((prev) => (prev + 1) % slides.length)
               }
-              className="p-2 rounded-full border border-white/30 text-white/70"
+              className="p-2.5 rounded-full border-2 border-white/40 text-white/80 hover:bg-teal/20 hover:border-teal hover:text-white transition-all duration-300 backdrop-blur-sm"
+              aria-label="Next slide"
             >
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
       </div>
+
+      {/* Decorative Elements */}
+      <div className="absolute top-1/4 right-10 w-64 h-64 bg-orange/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
+      <div className="absolute bottom-1/4 left-10 w-80 h-80 bg-teal/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
     </section>
   );
 };
