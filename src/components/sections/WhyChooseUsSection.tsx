@@ -8,37 +8,37 @@ const advantages = [
     icon: GraduationCap,
     title: "Deep Industry Expertise",
     description:
-      "Our team brings decades of combined experience across financial services, risk management, and capital markets, providing insights that drive results.",
+      "Decades of combined experience delivering insights that drive results.",
   },
   {
     icon: Settings,
     title: "Tailored Solutions",
     description:
-      "We recognize that every client is unique. Our solutions are customized to your specific needs, goals, and circumstances—never one-size-fits-all.",
+      "Customized strategies for your specific needs and goals—never one-size-fits-all.",
   },
   {
     icon: BarChart3,
     title: "Proven Results",
     description:
-      "Our track record speaks for itself. We've helped numerous clients achieve their financial objectives through strategic planning and expert execution.",
+      "Track record of helping clients achieve financial objectives through expert execution.",
   },
   {
     icon: Handshake,
     title: "Long-Term Partnerships",
     description:
-      "We're not just advisors—we're partners invested in your success. We build lasting relationships based on trust, transparency, and mutual growth.",
+      "Lasting relationships built on trust, transparency, and mutual growth.",
   },
   {
     icon: Sparkles,
     title: "Innovative Approach",
     description:
-      "We combine traditional financial wisdom with cutting-edge tools and methodologies to deliver solutions that meet today's challenges and tomorrow's opportunities.",
+      "Traditional wisdom meets cutting-edge tools for modern financial challenges.",
   },
   {
     icon: Globe,
     title: "Flexible Delivery",
     description:
-      "Whether you prefer online consultations or in-person meetings, we adapt to your preferences, ensuring accessible and convenient service delivery.",
+      "Online or in-person consultations adapted to your preferences.",
   },
 ];
 
@@ -56,7 +56,9 @@ const WhyChooseUsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="badge-style mb-6">Why Us</span>
+          <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orange/10 text-orange border border-orange/20 mb-6">
+            Why Us
+          </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             The Uruhu Advantage
           </h2>
@@ -75,10 +77,10 @@ const WhyChooseUsSection = () => {
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               className="group relative"
             >
-              <div className="p-8 rounded-2xl border border-border bg-card hover:border-accent/40 hover:shadow-card-hover transition-all duration-300">
+              <div className="p-8 rounded-2xl border border-border bg-card hover:border-orange/40 hover:shadow-card-hover transition-all duration-300">
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-navy/10 flex items-center justify-center mb-5 group-hover:bg-navy/20 transition-colors">
-                  <advantage.icon className="w-7 h-7 text-navy" />
+                <div className="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 group-hover:bg-teal/20 transition-colors">
+                  <advantage.icon className="w-7 h-7 text-teal" />
                 </div>
 
                 {/* Title */}
@@ -93,7 +95,7 @@ const WhyChooseUsSection = () => {
               </div>
 
               {/* Decorative number */}
-              <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold flex items-center justify-center">
+              <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-orange/20 text-orange text-sm font-bold flex items-center justify-center border border-orange/30">
                 {String(index + 1).padStart(2, "0")}
               </span>
             </motion.div>
