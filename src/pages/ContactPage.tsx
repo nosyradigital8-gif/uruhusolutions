@@ -13,7 +13,7 @@ import {
   Send,
   Users
 } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/contact-hero-image.jpg";
 import { NavLink } from "@/components/NavLink";
 
 const contactMethods = [
