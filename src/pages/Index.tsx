@@ -21,7 +21,7 @@ const Index = () => {
         <ProcessSection />
         <TestimonialsSection />
       </main>
-      <Footer />
+  
     </div>
   );
 };
