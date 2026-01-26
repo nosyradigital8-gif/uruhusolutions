@@ -9,19 +9,19 @@ const services = [
     icon: TrendingUp,
     title: "Funding & Capital Advisory",
     description:
-      "Navigate the complex landscape of capital acquisition with confidence. We connect you with the right funding sources, structure optimal financing solutions, and guide you through every stage of the capital raising process.",
+      "Connect with the right funding sources and structure optimal financing solutions for your capital needs.",
     features: [
       "Capital Structure Optimization",
       "Investor Relations Management",
       "Debt & Equity Financing",
-      "Grant & Alternative Funding Solutions",
+      "Alternative Funding Solutions",
     ],
   },
   {
     icon: Shield,
     title: "Risk Advisory",
     description:
-      "Identify, assess, and mitigate financial and operational risks before they impact your bottom line. Our comprehensive risk advisory services help you build resilience, ensure compliance, and protect your organization's value.",
+      "Identify and mitigate financial risks before they impact your bottom line. Build resilience and ensure compliance.",
     features: [
       "Enterprise Risk Management",
       "Compliance & Regulatory Advisory",
@@ -33,11 +33,11 @@ const services = [
     icon: PieChart,
     title: "Portfolio & Asset Management",
     description:
-      "Maximize returns while managing risk through strategic portfolio and asset management. We design customized investment strategies aligned with your goals, risk tolerance, and time horizon.",
+      "Maximize returns through strategic portfolio management aligned with your goals and risk tolerance.",
     features: [
       "Investment Strategy Development",
       "Asset Allocation & Diversification",
-      "Performance Monitoring & Reporting",
+      "Performance Monitoring",
       "Wealth Preservation Planning",
     ],
   },
@@ -57,7 +57,9 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="badge-style mb-6">Our Services</span>
+          <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-teal/10 text-teal border border-teal/20 mb-6">
+            Our Services
+          </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Comprehensive Solutions for Your Financial Success
           </h2>
@@ -74,11 +76,11 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-accent/30"
+              className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-teal/30"
             >
               {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-gradient-teal flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-8 h-8 text-accent-foreground" />
+              <div className="w-16 h-16 rounded-2xl bg-teal flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:shadow-teal-glow">
+                <service.icon className="w-8 h-8 text-white" />
               </div>
 
               {/* Title */}
@@ -95,7 +97,7 @@ const ServicesSection = () => {
               <ul className="space-y-3 mb-6">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3 text-sm text-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -104,7 +106,7 @@ const ServicesSection = () => {
               {/* Learn More Link */}
               <a
                 href="#"
-                className="inline-flex items-center gap-2 text-accent font-medium group-hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-teal font-medium group-hover:gap-3 transition-all hover:text-teal-dark"
               >
                 Learn More
                 <ArrowRight className="w-4 h-4" />
@@ -120,7 +122,10 @@ const ServicesSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <Button variant="navy" size="lg">
+          <Button 
+            className="bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold transition-all duration-300"
+            size="lg"
+          >
             Schedule a Consultation
           </Button>
         </motion.div>
