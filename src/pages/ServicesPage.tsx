@@ -12,7 +12,7 @@ import {
   Users,
   LineChart
 } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/service-hero-image.jpg";
 import { NavLink } from "@/components/NavLink";
 
 const services = [
@@ -115,7 +115,7 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative flex items-center overflow-hidden pt-24 md:pt-32 min-h-[70vh]">
+      <section ref={heroRef} className="relative flex items-center overflow-hidden pt-24 md:pt-32 min-h-[100vh]">
         {/* Background */}
         <div className="absolute inset-0">
           <img
