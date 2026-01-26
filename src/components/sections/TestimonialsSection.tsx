@@ -7,21 +7,21 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Uruhu Solutions transformed our approach to capital management. Their strategic guidance helped us secure funding that accelerated our growth by 300% in just 18 months.",
+      "Strategic guidance that helped us secure funding and accelerate growth by 300% in 18 months.",
     author: "Chief Financial Officer",
     company: "Lagos-based Tech Startup",
     rating: 5,
   },
   {
     quote:
-      "The risk advisory framework they implemented gave us clarity and confidence we never had before. We now make decisions based on data, not guesswork.",
+      "The risk advisory framework gave us clarity and confidence to make data-driven decisions.",
     author: "Managing Director",
     company: "Manufacturing Company",
     rating: 5,
   },
   {
     quote:
-      "Professional, knowledgeable, and genuinely invested in our success. Uruhu Solutions doesn't just advise—they partner with you for the long term.",
+      "Professional, knowledgeable, and genuinely invested in our success. True long-term partners.",
     author: "Individual Investor",
     company: "Entrepreneur",
     rating: 5,
@@ -42,7 +42,9 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="badge-style mb-6">Success Stories</span>
+          <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-teal/10 text-teal border border-teal/20 mb-6">
+            Success Stories
+          </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Trusted by Leading Organizations and Individuals
           </h2>
@@ -59,19 +61,19 @@ const TestimonialsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border relative"
+              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-orange/30 relative"
             >
               {/* Quote Icon */}
               <div className="absolute -top-4 left-8">
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                  <Quote className="w-5 h-5 text-accent-foreground" />
+                <div className="w-10 h-10 rounded-full bg-orange flex items-center justify-center shadow-orange-glow">
+                  <Quote className="w-5 h-5 text-white" />
                 </div>
               </div>
 
               {/* Rating */}
               <div className="flex gap-1 mb-6 mt-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star key={i} className="w-5 h-5 fill-orange text-orange" />
                 ))}
               </div>
 
@@ -98,7 +100,10 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <Button variant="tealOutline" size="lg">
+          <Button 
+            className="border-2 border-teal text-teal bg-transparent hover:bg-teal hover:text-white hover:shadow-teal-glow font-semibold transition-all duration-300"
+            size="lg"
+          >
             Read More Success Stories
           </Button>
         </motion.div>
