@@ -142,7 +142,6 @@ const Footer = () => {
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
               <p>© 2025 Uruhu Solutions. All Rights Reserved.</p>
-              <p className="text-teal font-medium">uruhusolutions.com.ng</p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-white transition-colors">
                   Privacy Policy
