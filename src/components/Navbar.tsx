@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import logoImage from "@/assets/uruhu-logo.jpg";
 
 const navLinks = [
+  { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Why Us", to: "/why-us" },
@@ -34,7 +35,7 @@ const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? "bg-background/95 backdrop-blur-md shadow-md py-3"
-            : "bg-navy/30 backdrop-blur-sm py-4"
+            : "bg-navy/30 py-4"
         }`}
       >
         <div className="container-narrow px-4 md:px-8 lg:px-16">
@@ -47,11 +48,6 @@ const Navbar = () => {
                 className={`transition-all duration-300 object-contain group-hover:scale-105 ${
                   isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
                 }`}
-                style={{
-                  filter: isScrolled 
-                    ? 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' 
-                    : 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))'
-                }}
               />
             </NavLink>
 
