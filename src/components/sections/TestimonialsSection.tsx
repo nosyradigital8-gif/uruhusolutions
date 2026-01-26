@@ -7,26 +7,28 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Strategic guidance that helped us secure funding and accelerate growth by 300% in 18 months.",
-    author: "Chief Financial Officer",
-    company: "Lagos-based Tech Startup",
+      "Strategic guidance that helped us secure funding and accelerate growth by 300% in just 18 months.",
+    author: "Adebayo Williams",
+    company: "CFO, FluxPay Technologies (Lagos)",
     rating: 5,
   },
   {
     quote:
-      "The risk advisory framework gave us clarity and confidence to make data-driven decisions.",
-    author: "Managing Director",
-    company: "Manufacturing Company",
+      "The risk advisory framework gave us clarity and confidence to make data-driven decisions across our operations.",
+    author: "Ifunanya Okeke",
+    company: "Managing Director, PrimeSteel Manufacturing",
     rating: 5,
   },
   {
     quote:
-      "Professional, knowledgeable, and genuinely invested in our success. True long-term partners.",
-    author: "Individual Investor",
-    company: "Entrepreneur",
+      "Professional, knowledgeable, and genuinely invested in our success. They feel more like partners than consultants.",
+    author: "Daniel Mensah",
+    company: "Entrepreneur & Private Investor",
     rating: 5,
   },
 ];
+
+
 
 const TestimonialsSection = () => {
   const ref = useRef(null);
