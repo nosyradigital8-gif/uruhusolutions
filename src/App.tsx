@@ -8,6 +8,7 @@ import Footer from "./components/sections/Footer";
 import Index from "./pages/Index";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
+import WhyUsPage from './pages/WhyUsPage';
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
