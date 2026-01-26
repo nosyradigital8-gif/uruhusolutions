@@ -12,7 +12,7 @@ import {
   Users,
   LineChart
 } from "lucide-react";
-import heroImage from "@/assets/service-hero-image.jpg";
+import heroImage from "@/assets/service-hero2-image.jpg";
 import { NavLink } from "@/components/NavLink";
 
 const services = [
