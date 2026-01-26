@@ -9,10 +9,9 @@ const services = [
     icon: TrendingUp,
     title: "Funding & Capital Advisory",
     description:
-      "Connect with the right funding sources and structure optimal financing solutions for your capital needs.",
+      "Strategic funding solutions and capital structure optimization for sustainable growth.",
     features: [
       "Capital Structure Optimization",
-      "Investor Relations Management",
       "Debt & Equity Financing",
       "Alternative Funding Solutions",
     ],
@@ -21,11 +20,10 @@ const services = [
     icon: Shield,
     title: "Risk Advisory",
     description:
-      "Identify and mitigate financial risks before they impact your bottom line. Build resilience and ensure compliance.",
+      "Comprehensive risk management to protect your organization's value and ensure compliance.",
     features: [
       "Enterprise Risk Management",
       "Compliance & Regulatory Advisory",
-      "Financial Risk Assessment",
       "Crisis Management Planning",
     ],
   },
@@ -33,12 +31,11 @@ const services = [
     icon: PieChart,
     title: "Portfolio & Asset Management",
     description:
-      "Maximize returns through strategic portfolio management aligned with your goals and risk tolerance.",
+      "Tailored investment strategies to maximize returns and preserve wealth.",
     features: [
       "Investment Strategy Development",
       "Asset Allocation & Diversification",
       "Performance Monitoring",
-      "Wealth Preservation Planning",
     ],
   },
 ];
