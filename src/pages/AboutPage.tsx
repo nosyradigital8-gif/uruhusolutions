@@ -3,8 +3,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Target, Award, Users, Lightbulb, TrendingUp, Shield, Heart } from "lucide-react";
-import aboutTeamImage from "@/assets/about-team.jpg";
-import heroImage from "@/assets/hero-image.jpg";
+import aboutTeamImage from "@/assets/about1-hero-image.jpg";
+import heroImage from "@/assets/about2-hero-image.jpg";
 import { NavLink } from "@/components/NavLink";
 
 const highlights = [
