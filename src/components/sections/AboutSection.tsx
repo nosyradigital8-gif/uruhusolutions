@@ -73,15 +73,10 @@ const AboutSection = () => {
               Delivering Clarity, Structure, and Sustainable Growth
             </p>
             
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Uruhu Solutions stands at the intersection of innovation and expertise. We are a forward-thinking 
-              financial and risk advisory firm committed to empowering individuals and organizations across Nigeria 
-              to achieve their financial objectives with confidence.
-            </p>
-            
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Our approach combines deep market knowledge, strategic thinking, and personalized service to deliver 
-              solutions that are both practical and transformative.
+              Uruhu Solutions is a forward-thinking financial and risk advisory firm empowering individuals 
+              and organizations across Nigeria to achieve their financial objectives with confidence through 
+              strategic thinking and personalized service.
             </p>
 
             {/* Highlights */}
