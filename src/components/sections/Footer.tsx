@@ -7,8 +7,8 @@ import logoImage from "@/assets/uruhu-logo.jpg";
 const quickLinks = [
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Our Process", href: "#process" },
-  { label: "Success Stories", href: "#testimonials" },
+  { label: "Why Us", href: "#why-us" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-primary text-primary-foreground">
+    <footer id="contact" className="bg-gradient-to-br from-navy via-slate to-navy text-white">
       {/* Main Footer */}
       <div className="section-padding pb-8">
         <div className="container-narrow">
@@ -35,38 +35,45 @@ const Footer = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <img src={logoImage} alt="Uruhu Solutions" className="h-16 mb-4" />
-                <p className="text-accent">Building Value. Managing Risk.</p>
+                <img 
+                  src={logoImage} 
+                  alt="Uruhu Solutions" 
+                  className="h-16 mb-4"
+                  style={{
+                    filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))'
+                  }}
+                />
+                <p className="text-teal font-medium mb-8">Building Value. Managing Risk.</p>
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center">
-                      <Mail className="w-5 h-5 text-accent" />
+                    <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
+                      <Mail className="w-5 h-5 text-orange" />
                     </div>
                     <div>
-                      <p className="text-sm text-primary-foreground/70">Email Us</p>
-                      <a href="mailto:sbm@uruhusolutions.com" className="hover:text-accent transition-colors">
+                      <p className="text-sm text-white/70">Email Us</p>
+                      <a href="mailto:sbm@uruhusolutions.com" className="hover:text-orange transition-colors">
                         sbm@uruhusolutions.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center">
-                      <Clock className="w-5 h-5 text-accent" />
+                    <div className="w-10 h-10 rounded-lg bg-teal/20 flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-teal" />
                     </div>
                     <div>
-                      <p className="text-sm text-primary-foreground/70">Business Hours</p>
+                      <p className="text-sm text-white/70">Business Hours</p>
                       <p>Monday - Friday: 9:00 AM - 5:00 PM WAT</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-accent" />
+                    <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
+                      <MapPin className="w-5 h-5 text-orange" />
                     </div>
                     <div>
-                      <p className="text-sm text-primary-foreground/70">Service Area</p>
+                      <p className="text-sm text-white/70">Service Area</p>
                       <p>Nigeria & Beyond</p>
                     </div>
                   </div>
@@ -88,7 +95,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-primary-foreground/80 hover:text-accent transition-colors"
+                        className="text-white/80 hover:text-teal transition-colors"
                       >
                         {link.label}
                       </a>
@@ -107,8 +114,8 @@ const Footer = () => {
                 viewport={{ once: true }}
               >
                 <h4 className="font-heading font-semibold text-lg mb-6">Stay Informed</h4>
-                <p className="text-primary-foreground/80 text-sm mb-4">
-                  Subscribe to receive financial insights, market updates, and exclusive advisory tips.
+                <p className="text-white/80 text-sm mb-4">
+                  Subscribe for financial insights and market updates.
                 </p>
                 <form onSubmit={handleSubscribe} className="space-y-3">
                   <input
@@ -116,10 +123,13 @@ const Footer = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your email address"
-                    className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-teal transition-colors"
                     required
                   />
-                  <Button type="submit" variant="teal" className="w-full">
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold transition-all duration-300"
+                  >
                     <Send className="w-4 h-4 mr-2" />
                     Subscribe
                   </Button>
@@ -129,15 +139,15 @@ const Footer = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-primary-foreground/20 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
+          <div className="border-t border-white/20 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
               <p>© 2025 Uruhu Solutions. All Rights Reserved.</p>
-              <p className="text-accent font-medium">uruhusolutions.com.ng</p>
+              <p className="text-teal font-medium">uruhusolutions.com.ng</p>
               <div className="flex gap-6">
-                <a href="#" className="hover:text-primary-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Privacy Policy
                 </a>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Terms of Service
                 </a>
               </div>
