@@ -48,7 +48,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative flex items-center overflow-hidden pt-24 md:pt-32 min-h-[80vh]">
+      <section ref={heroRef} className="relative flex items-center overflow-hidden pt-24 md:pt-32 min-h-[100vh]">
         {/* Background */}
         <div className="absolute inset-0">
           <img
