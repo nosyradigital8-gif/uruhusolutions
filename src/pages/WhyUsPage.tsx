@@ -25,7 +25,7 @@ const advantages = [
   {
     icon: Settings,
     title: "Tailored Solutions",
-    description: "Customized strategies for your specific needs—never one-size-fits-all.",
+    description: "Customized strategies for your specific needs never one-size-fits-all.",
   },
   {
     icon: BarChart3,
