@@ -22,7 +22,7 @@ const faqs = [
       {
         question: "What industries do you specialize in?",
         answer:
-          "Our expertise spans fintech, banking, insurance, real estate, and emerging markets across Nigeria. However, our frameworks are adaptable — we regularly work with clients outside these verticals.",
+          "Our expertise spans fintech, banking, insurance, real estate, and emerging markets across Nigeria. However, our frameworks are adaptable  we regularly work with clients outside these verticals.",
       },
     ],
   },
@@ -47,7 +47,7 @@ const faqs = [
       {
         question: "What makes Uruhu Solutions different from other advisory firms?",
         answer:
-          "With over 10 years of proven excellence, we combine deep market knowledge with a genuinely client-centric approach. We don't just advise — we partner with you, offering transparency, accountability, and long-term thinking at every step.",
+          "With over 10 years of proven excellence, we combine deep market knowledge with a genuinely client-centric approach. We don't just advise  we partner with you, offering transparency, accountability, and long-term thinking at every step.",
       },
       {
         question: "Are my financial details kept confidential?",
@@ -237,7 +237,7 @@ const FAQSection = () => {
             </p>
 
             <button className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300">
-              Contact Us
+              Reach Out Lets Bring your Vision to Life 
             </button>
           </div>
         </motion.div>
