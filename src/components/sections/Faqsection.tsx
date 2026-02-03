@@ -104,7 +104,7 @@ const AccordionItem = ({
         className="flex-shrink-0 mt-0.5"
       >
         <ChevronDown className="w-5 h-5 text-teal" />
-      </ChevronDown>
+      </motion.div>
     </button>
 
     {/* Animated Panel */}
