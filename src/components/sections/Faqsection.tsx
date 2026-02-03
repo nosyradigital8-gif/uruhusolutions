@@ -1,5 +1,5 @@
 "use client";
-
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -236,9 +236,12 @@ const FAQSection = () => {
               back to you within 24 hours.
             </p>
 
-            <button className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300">
-              Reach Out Lets Bring your Vision to Life 
-            </button>
+<Link
+  to="/contact"
+  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300"
+>
+  Reach Out — Let’s Bring Your Vision to Life
+</Link>
           </div>
         </motion.div>
       </div>
