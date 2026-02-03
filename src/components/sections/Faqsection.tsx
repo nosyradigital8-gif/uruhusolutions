@@ -240,7 +240,7 @@ const FAQSection = () => {
   to="/contact"
   className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300"
 >
-  Reach Out — Let’s Bring Your Vision to Life
+  Reach Out  Let’s Bring Your Vision to Life
 </Link>
           </div>
         </motion.div>
