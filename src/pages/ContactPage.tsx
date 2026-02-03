@@ -167,7 +167,7 @@ const ContactPage = () => {
               Choose Your Preferred Channel
             </h2>
             <p className="text-lg text-muted-foreground">
-              Multiple ways to reach us—pick what works best for you
+              Multiple ways to reach us pick what works best for you
             </p>
           </motion.div>
 
