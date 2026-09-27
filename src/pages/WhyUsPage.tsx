@@ -19,13 +19,13 @@ import { NavLink } from "@/components/NavLink";
 const advantages = [
   {
     icon: GraduationCap,
-    title: "Deep Industry Expertise",
-    description: "Decades of combined experience delivering insights that drive results.",
+    title: "Financial & Risk Expertise",
+    description: "Experience grounded in financial services, regulatory oversight and business strategy.",
   },
   {
     icon: Settings,
-    title: "Tailored Solutions",
-    description: "Customized strategies for your specific needs never one-size-fits-all.",
+    title: "Practical Solutions",
+    description: "Recommendations designed to support implementation and useful outcomes.",
   },
   {
     icon: BarChart3,
@@ -34,18 +34,18 @@ const advantages = [
   },
   {
     icon: Handshake,
-    title: "Long-Term Partnerships",
-    description: "Lasting relationships built on trust and mutual growth.",
+    title: "Client Focus",
+    description: "Every engagement begins with your objectives, constraints and operating environment.",
   },
   {
     icon: Sparkles,
-    title: "Innovative Approach",
-    description: "Traditional wisdom meets cutting-edge tools for modern challenges.",
+    title: "Independent Thinking",
+    description: "Objective advice that considers the wider business, financial and risk implications.",
   },
   {
     icon: Globe,
-    title: "Flexible Delivery",
-    description: "Online or in-person consultations adapted to your preferences.",
+    title: "Local Understanding",
+    description: "Advice tailored to the realities of doing business in Nigeria.",
   },
 ];
 
@@ -54,9 +54,9 @@ const differentiators = [
     icon: Target,
     title: "Client-Centric Focus",
     points: [
-      "Your goals drive every recommendation",
+      "Your objectives guide every recommendation",
       "Transparent communication at all stages",
-      "Personalized attention from experienced advisors",
+      "Clear communication and practical attention throughout the engagement",
     ],
   },
   {
@@ -65,7 +65,7 @@ const differentiators = [
     points: [
       "Rigorous analysis and due diligence",
       "Strategic implementation support",
-      "Continuous monitoring and optimization",
+      "Review and refinement where agreed",
     ],
   },
   {
@@ -74,7 +74,7 @@ const differentiators = [
     points: [
       "Structured approach to advisory",
       "Data-driven decision making",
-      "Results-oriented solutions",
+      "Advice structured around useful next steps",
     ],
   },
 ];
@@ -120,7 +120,7 @@ const WhyUsPage = () => {
               What Sets Us Apart
             </p>
             <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl">
-              Expertise, innovation, and unwavering commitment to your financial success.
+              Practical advice grounded in business, finance and risk expertise.
             </p>
           </motion.div>
         </div>
@@ -146,7 +146,7 @@ const WhyUsPage = () => {
               Why Clients Trust Us
             </h2>
             <p className="text-lg text-muted-foreground">
-              The key advantages that make us your ideal financial advisory partner
+              The principles that guide our advisory approach
             </p>
           </motion.div>
 
@@ -198,7 +198,7 @@ const WhyUsPage = () => {
               How We Deliver Value
             </h2>
             <p className="text-lg text-muted-foreground">
-              Our approach to ensuring your success
+              Our approach to delivering practical advice
             </p>
           </motion.div>
 
@@ -246,10 +246,10 @@ const WhyUsPage = () => {
             className="max-w-3xl mx-auto"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-              Experience the Uruhu Difference
+              Build a Clearer Path Forward
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Partner with us to achieve your financial goals with confidence and clarity.
+              Discuss your objectives with us and explore the practical options available to you. We provide advice, not guarantees.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <NavLink to="/contact">
@@ -257,7 +257,7 @@ const WhyUsPage = () => {
                   className="bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold transition-all duration-300"
                   size="lg"
                 >
-                  Get Started Today
+                  Discuss Your Needs
                 </Button>
               </NavLink>
               <NavLink to="/services">

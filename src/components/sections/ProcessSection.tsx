@@ -8,30 +8,30 @@ const steps = [
   {
     number: "01",
     icon: Search,
-    title: "Discovery & Assessment",
+    title: "Discovery",
     description:
-      "Understand your unique situation, goals, and challenges through comprehensive consultation.",
+      "We understand your business or financial position, goals and challenges.",
   },
   {
     number: "02",
     icon: MapPin,
-    title: "Strategic Planning",
+    title: "Assessment",
     description:
-      "Develop customized strategies aligned with your objectives and market opportunities.",
+      "We assess the financial, operational and risk considerations that matter to your decision.",
   },
   {
     number: "03",
     icon: Play,
     title: "Implementation",
     description:
-      "Hands-on support for smooth execution of recommended solutions.",
+      "We support agreed next steps and coordinate with relevant stakeholders.",
   },
   {
     number: "04",
     icon: LineChart,
-    title: "Monitoring & Optimization",
+    title: "Review",
     description:
-      "Continuous tracking and adjustments to keep you on course toward your goals.",
+      "We review progress and refine the approach where needed.",
   },
 ];
 
@@ -53,10 +53,10 @@ const ProcessSection = () => {
             Our Process
           </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Your Journey to Financial Success
+            A Structured Path Forward
           </h2>
           <p className="text-lg text-white/80">
-            A Structured, Transparent Approach to Advisory Excellence
+            A Structured, Transparent Approach to Practical Advice
           </p>
         </motion.div>
 
@@ -108,7 +108,7 @@ const ProcessSection = () => {
             className="bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold transition-all duration-300 border-0"
             size="lg"
           >
-            Start Your Journey
+            Discuss Your Needs
           </Button>
         </motion.div>
       </div>
