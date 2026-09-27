@@ -11,6 +11,7 @@ import ServicesPage from "./pages/ServicesPage";
 import WhyUsPage from './pages/WhyUsPage';
 import ContactPage from './pages/ContactPage';
 import NotFound from "./pages/NotFound";
+import SEO from "./components/SEO";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SEO />
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
