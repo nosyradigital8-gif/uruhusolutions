@@ -12,12 +12,12 @@ const faqs = [
       {
         question: "What financial advisory services does Uruhu Solutions offer?",
         answer:
-          "We provide a comprehensive suite of financial advisory services including personal financial planning, corporate risk assessment, investment strategy, tax advisory, and wealth management — all tailored to your specific goals and risk profile.",
+          "We provide business advisory, financial analysis, funding preparation, risk advisory and financial and investment education. Any personalised investment or asset and portfolio advisory is subject to confirmation of the appropriate permissions and scope.",
       },
       {
         question: "Do you work with individuals or only businesses?",
         answer:
-          "We serve both. Our team is experienced in working with high-net-worth individuals, startups, SMEs, and large enterprises. Every engagement begins with a deep understanding of your unique situation.",
+          "We serve both businesses and individuals, including entrepreneurs, growing businesses, SMEs, fintechs and financial institutions. Every engagement begins with a clear understanding of your situation and objectives.",
       },
       {
         question: "What industries do you specialize in?",
@@ -42,12 +42,12 @@ const faqs = [
     ],
   },
   {
-    category: "Trust & Track Record",
+    category: "Trust & Approach",
     items: [
       {
         question: "What makes Uruhu Solutions different from other advisory firms?",
         answer:
-          "With over 10 years of proven excellence, we combine deep market knowledge with a genuinely client-centric approach. We don't just advise  we partner with you, offering transparency, accountability, and long-term thinking at every step.",
+          "We combine business, finance and risk perspectives with a practical, client-focused approach. We offer objective advice, clear communication and structured next steps without promising outcomes we cannot control.",
       },
       {
         question: "Are my financial details kept confidential?",
@@ -57,7 +57,7 @@ const faqs = [
       {
         question: "Can I see case studies or testimonials from past clients?",
         answer:
-          "Yes — we're happy to share relevant success stories and references (with client permission) during the onboarding process. Our track record speaks for itself, and we welcome you to experience it firsthand.",
+          "Where appropriate and with client permission, we can discuss relevant experience and client perspectives. Each engagement is shaped around the client’s circumstances and objectives.",
       },
     ],
   },

@@ -29,8 +29,8 @@ const advantages = [
   },
   {
     icon: BarChart3,
-    title: "Proven Results",
-    description: "Track record of helping clients achieve financial objectives.",
+    title: "Practical Perspective",
+    description: "Clear, structured advice designed around each client’s objectives and circumstances.",
   },
   {
     icon: Handshake,
@@ -70,7 +70,7 @@ const differentiators = [
   },
   {
     icon: CheckCircle,
-    title: "Proven Methodology",
+    title: "Structured Methodology",
     points: [
       "Structured approach to advisory",
       "Data-driven decision making",

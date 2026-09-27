@@ -1,134 +1,15 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Shield, PieChart, ArrowRight } from "lucide-react";
+import { BriefcaseBusiness, TrendingUp, Shield, PieChart, ArrowRight } from "lucide-react";
+import { NavLink } from "@/components/NavLink";
 
 const services = [
-  {
-    icon: TrendingUp,
-    title: "Funding & Capital Advisory",
-    description:
-      "Strategic funding solutions and capital structure optimization for sustainable growth.",
-    features: [
-      "Capital Structure Optimization",
-      "Debt & Equity Financing",
-      "Alternative Funding Solutions",
-    ],
-  },
-  {
-    icon: Shield,
-    title: "Risk Advisory",
-    description:
-      "Comprehensive risk management to protect your organization's value and ensure compliance.",
-    features: [
-      "Enterprise Risk Management",
-      "Compliance & Regulatory Advisory",
-      "Crisis Management Planning",
-    ],
-  },
-  {
-    icon: PieChart,
-    title: "Portfolio & Asset Management",
-    description:
-      "Tailored investment strategies to maximize returns and preserve wealth.",
-    features: [
-      "Investment Strategy Development",
-      "Asset Allocation & Diversification",
-      "Performance Monitoring",
-    ],
-  },
+  { icon: BriefcaseBusiness, title: "Business Advisory & Solutions", description: "Building stronger businesses through better structure.", features: ["Business strategy and structuring", "Financial analysis and planning", "Performance and growth planning"] },
+  { icon: TrendingUp, title: "Funding & Capital Advisory", description: "Preparing businesses for the right capital opportunities.", features: ["Funding readiness assessment", "Financial models and projections", "Application preparation support"] },
+  { icon: Shield, title: "Risk Advisory", description: "Identifying risk. Strengthening resilience.", features: ["Enterprise risk assessment", "Controls and compliance advisory", "Risk reporting and continuity planning"] },
+  { icon: PieChart, title: "Financial & Investment Advisory", description: "Making better-informed financial decisions.", features: ["Financial planning conversations", "Investment education", "Asset and portfolio advisory, where appropriately scoped"] },
 ];
 
-const ServicesSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section id="services" className="section-padding bg-secondary" ref={ref}>
-      <div className="container-narrow">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-teal/10 text-teal border border-teal/20 mb-6">
-            Our Services
-          </span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-            Comprehensive Solutions for Your Financial Success
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Expert Advisory Across Funding, Risk Management, and Asset Optimization
-          </p>
-        </motion.div>
-
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-teal/30"
-            >
-              {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-teal flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:shadow-teal-glow">
-                <service.icon className="w-8 h-8 text-white" />
-              </div>
-
-              {/* Title */}
-              <h3 className="font-heading text-xl font-bold text-primary mb-4">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {service.description}
-              </p>
-
-              {/* Features */}
-              <ul className="space-y-3 mb-6">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Learn More Link */}
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-teal font-medium group-hover:gap-3 transition-all hover:text-teal-dark"
-              >
-                Learn More
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-12"
-        >
-          <Button 
-            className="bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold transition-all duration-300"
-            size="lg"
-          >
-            Schedule a Consultation
-          </Button>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
+const ServicesSection = () => { const ref = useRef(null); const isInView = useInView(ref, { once: true, margin: "-100px" }); return <section id="services" className="section-padding bg-secondary" ref={ref}><div className="container-narrow"><motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-16"><span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-teal/10 text-teal border border-teal/20 mb-6">Our Services</span><h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">Advisory Built Around Better Decisions</h2><p className="text-lg text-muted-foreground">Uruhu helps businesses and individuals structure finances, solve business problems, prepare for capital, manage risk and make informed decisions.</p></motion.div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => <motion.div key={service.title} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.15 + index * 0.1 }} className="group bg-card rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all border border-border hover:border-teal/30"><div className="w-14 h-14 rounded-2xl bg-teal flex items-center justify-center mb-6 group-hover:scale-105 transition-transform"><service.icon className="w-7 h-7 text-white" /></div><h3 className="font-heading text-xl font-bold text-primary mb-3">{service.title}</h3><p className="text-muted-foreground leading-relaxed mb-5">{service.description}</p><ul className="space-y-3 mb-6">{service.features.map((feature) => <li key={feature} className="flex items-start gap-3 text-sm text-foreground"><span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0 mt-2" />{feature}</li>)}</ul><NavLink to="/services" className="inline-flex items-center gap-2 text-teal font-medium group-hover:gap-3 transition-all">Explore Service<ArrowRight className="w-4 h-4" /></NavLink></motion.div>)}</div><div className="text-center mt-12"><NavLink to="/contact"><Button className="bg-orange hover:bg-orange-dark hover:shadow-orange-glow text-white font-semibold" size="lg">Schedule a Consultation</Button></NavLink></div></div></section>; };
 export default ServicesSection;
